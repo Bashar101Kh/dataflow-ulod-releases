@@ -2,7 +2,7 @@
 
 **Nie wieder gedrosselt.** Dataflow ULOD bucht dein Lidl Connect Unlimited-Datenvolumen automatisch nach – auf Wunsch schon *bevor* gedrosselt wird. Einmal einrichten, nie wieder dran denken.
 
-> Ich bin der Entwickler und nutze ULOD selbst als Ersatz für meinen Festnetz-Anschluss: 469 GB in einem Monat, 464 automatische Nachbuchungen, null Ausfälle. Ich habe die App gebaut, weil ich sie jeden Tag brauche.
+> Ich bin der Entwickler und ULOD ersetzt meinen Festnetz-Anschluss seit über sechs Monaten. Seit Februar: über 2 Terabyte gebucht, 2.158 automatische Nachbuchungen, null Fehler. Ich habe die App gebaut, weil ich sie jeden Tag brauche.
 
 Mehr auf der [Website](https://dataflow-ulod-auto-refill.lovable.app) · [Instagram @dataflow.ulod](https://www.instagram.com/dataflow.ulod/)
 
@@ -14,8 +14,11 @@ Mehr auf der [Website](https://dataflow-ulod-auto-refill.lovable.app) · [Instag
 
 Dieser Link zeigt immer auf die neueste Version. Alle Versionen und Release Notes findest du auf der [Releases-Seite](https://github.com/Bashar101Kh/dataflow-ulod-releases/releases).
 
-<!-- SCREENSHOTS: Füge hier 3 aktuelle Screenshots ein (Status-Screen, Statistiken, geführtes Setup).
-     WICHTIG: Niemals Screenshots verwenden, die SMS-Inhalte, Kurzwahlnummern oder System-Dialoge zeigen. -->
+| Februar | April | Juni |
+| --- | --- | --- |
+| <img src="screenshot-stats-feb.jpg" width="260" alt="Februar: 602 GB, 602 Nachbuchungen, 100% Erfolg"> | <img src="screenshot-stats-apr.jpg" width="260" alt="April: 362 GB, 362 Nachbuchungen, 100% Erfolg"> | <img src="screenshot-stats-jun.jpg" width="260" alt="Juni: 446 GB, 446 Nachbuchungen, 100% Erfolg"> |
+
+*Echte Nutzung auf dem Gerät des Entwicklers – Heim-Internet-Ersatz seit über 6 Monaten. Februar 602 GB · März 438 GB · April 362 GB · Mai 310 GB · Juni 446 GB — **zusammen über 2 TB, 0 fehlgeschlagene Nachbuchungen.***
 
 ### Installation
 
@@ -79,7 +82,7 @@ Bug gefunden oder Frage? [Issue öffnen](https://github.com/Bashar101Kh/dataflow
 
 **Never throttled again.** Dataflow ULOD automatically refills your Lidl Connect Unlimited data — optionally *before* you get throttled. Set it up once, never think about it again.
 
-I'm the developer and I use ULOD as the replacement for my home internet: 469 GB in one month, 464 automatic refills, zero failures.
+I'm the developer and ULOD has replaced my home internet for over six months. Since February: over 2 terabytes booked, 2,158 automatic refills, zero failures.
 
 **[⬇ Download the latest APK](https://github.com/Bashar101Kh/dataflow-ulod-releases/releases/latest/download/dataflow-ulod.apk)** · [Website](https://dataflow-ulod-auto-refill.lovable.app) · [Instagram](https://www.instagram.com/dataflow.ulod/)
 
