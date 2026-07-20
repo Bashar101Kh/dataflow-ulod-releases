@@ -1,78 +1,68 @@
 # Dataflow ULOD
 
-**Automatic data refills for Lidl Connect Unlimited (ULOD).**
-The app books your next gigabyte *before* you get throttled — your connection
-just keeps working, and you never think about your data volume again.
+**Nie wieder gedrosselt.** Dataflow ULOD bucht dein Lidl Connect Unlimited-Datenvolumen automatisch nach – auf Wunsch schon *bevor* gedrosselt wird. Einmal einrichten, nie wieder dran denken.
 
-> **Deutsch:** Dataflow ULOD bucht dein Lidl Connect Unlimited-Datenvolumen
-> automatisch nach — auf Wunsch schon *bevor* gedrosselt wird, ohne auf die
-> Status-SMS zu warten. Einmal einrichten, nie wieder dran denken.
-> Mehr auf der [Website](https://dataflow-ulod-auto-refill.lovable.app).
+> Ich bin der Entwickler und nutze ULOD selbst als Ersatz für meinen Festnetz-Anschluss: 469 GB in einem Monat, 464 automatische Nachbuchungen, null Ausfälle. Ich habe die App gebaut, weil ich sie jeden Tag brauche.
+
+Mehr auf der [Website](https://dataflow-ulod-auto-refill.lovable.app) · [Instagram @dataflow.ulod](https://www.instagram.com/dataflow.ulod/)
 
 ---
 
 ## Download
 
-**[⬇ Download the latest APK](https://github.com/Bashar101Kh/dataflow-ulod-releases/releases/latest/download/dataflow-ulod.apk)**
+**[⬇ Aktuelle APK herunterladen](https://github.com/Bashar101Kh/dataflow-ulod-releases/releases/latest/download/dataflow-ulod.apk)**
 
-This link always points at the newest release. All versions and their release
-notes are on the [Releases page](https://github.com/Bashar101Kh/dataflow-ulod-releases/releases).
+Dieser Link zeigt immer auf die neueste Version. Alle Versionen und Release Notes findest du auf der [Releases-Seite](https://github.com/Bashar101Kh/dataflow-ulod-releases/releases).
 
-### Install
+<!-- SCREENSHOTS: Füge hier 3 aktuelle Screenshots ein (Status-Screen, Statistiken, geführtes Setup).
+     WICHTIG: Niemals Screenshots verwenden, die SMS-Inhalte, Kurzwahlnummern oder System-Dialoge zeigen. -->
 
-1. Download the APK on your phone.
-2. Open it — Android will ask you to allow installs from your browser
-   ("Install unknown apps"). Allow it once.
-3. Open Dataflow ULOD and follow the guided setup: sign in, grant SMS and
-   notification permissions, set **Premium SMS access** for short codes to
-   *Always allow*, and exclude the app from battery optimization.
+### Installation
 
-Updating later is easier: the app checks this repo and shows an update banner —
-installing a new APK over the old one keeps all your data.
+1. APK auf dem Handy herunterladen.
+2. Beim Öffnen fragt Android nach der Freigabe für Installationen aus dem Browser („Unbekannte Apps installieren") – einmal erlauben.
+3. Dataflow ULOD öffnen und dem geführten Setup folgen: anmelden (Google oder E-Mail), SMS- und Benachrichtigungs-Berechtigungen erteilen, **Premium-SMS-Zugriff** auf *Immer erlauben* setzen und die App von der Akku-Optimierung ausnehmen.
 
-## What it does
+Updates sind einfacher: Die App erkennt neue Versionen automatisch – eine neue APK über die alte installieren, alle Daten bleiben erhalten.
 
-Lidl Connect Unlimited ("ULOD") gives you 1 GB of full-speed data at a time —
-when it's used up, you're throttled until the next gigabyte is booked.
-Dataflow ULOD books it for you, automatically, with three trigger modes:
+## Was die App macht
 
-- **SMS** — reacts to Lidl's status SMS the moment it arrives.
-- **DATA** — the app counts your own mobile data and books the next gigabyte
-  *just before* the ~1 GB cliff, so the throttled moment never happens
-  (Lidl's status SMS is often minutes late — this doesn't wait for it).
-- **BOTH** *(default)* — the data counter leads, the SMS stays on as backstop.
+Beim Lidl Connect Unlimited-Tarif („ULOD") bekommst du 1 GB volle Geschwindigkeit am Stück – ist es verbraucht, wirst du gedrosselt, bis das nächste Gigabyte gebucht ist. Dataflow ULOD übernimmt das für dich, mit drei Modi:
 
-Plus: a live usage gauge, one-tap instant refill, a full activity log, and
-statistics (data booked, refill history, busiest times of day).
+- **SMS** – reagiert auf Lidls Status-SMS, sobald sie ankommt.
+- **DATA** – die App misst deinen Verbrauch selbst und bucht das nächste Gigabyte *kurz vor* der 1-GB-Grenze – der gedrosselte Moment passiert einfach nie (Lidls Status-SMS kommt oft Minuten zu spät – hier wird nicht gewartet).
+- **BEIDE** *(Standard)* – der Datenzähler führt, die SMS bleibt als Rückfallebene aktiv.
 
-## Requirements
+Dazu: Live-Verbrauchsanzeige, Sofort-Nachbuchung per Tipp, vollständiges Aktivitäts-Log und Statistiken (gebuchtes Volumen, Verlauf, Tageszeit-Analyse).
 
-- Android 7.0 or newer
-- A **Lidl Connect Unlimited** tariff (the 1 GB refill option) on an active SIM
-- The app is free during the public beta
+## Gut zu wissen (Ehrlichkeit zuerst)
 
-## Permissions, and why
+Automatisierte Nachbuchungen könnten laut Community-Berichten gegen die Lidl Connect AGB verstoßen – Nutzung auf eigene Verantwortung. ULOD bucht nur, was du auch manuell buchen dürftest, und verhält sich bewusst zurückhaltend: standardmäßig erst bei Lidls früher Warnung, nur ein Paket auf einmal, keine Massenaktionen.
 
-| Permission | Why the app needs it |
-|---|---|
-| Receive / read SMS | To see Lidl's status SMS ("your 1 GB is used up") and booking confirmations |
-| Send SMS | Refills are booked with Lidl Connect over the SMS channel — this is how the app does its job for you |
-| Notifications | Booking confirmations, failure alerts, and the monitoring status |
-| Run in background | The data counter runs as a foreground service so refills happen even with the app closed |
+## Voraussetzungen
 
-Everything SMS-related stays **on your phone**. Message contents are never
-uploaded; only your account sign-in and plan status talk to our backend.
+- Android 7.0 oder neuer
+- Ein **Lidl Connect Unlimited**-Tarif (die 1-GB-Nachbuchungs-Option) auf einer aktiven SIM
+- Die App ist während der öffentlichen Beta kostenlos
 
-## Why isn't this on the Play Store?
+## Berechtigungen – und warum
 
-Google Play's policies don't allow the kind of SMS automation this app is
-built on, regardless of intent. Direct APK distribution from this repository
-is the official and only channel — if you found this APK anywhere else, don't
-install it.
+| Berechtigung | Wofür die App sie braucht |
+| --- | --- |
+| SMS empfangen/lesen | Um Lidls Status-SMS („dein 1 GB ist verbraucht") und Buchungsbestätigungen zu sehen |
+| SMS senden | Nachbuchungen laufen bei Lidl Connect über den SMS-Kanal – so erledigt die App ihre Arbeit für dich |
+| Benachrichtigungen | Buchungsbestätigungen, Fehlermeldungen und der Überwachungsstatus |
+| Hintergrundausführung | Der Datenzähler läuft als Foreground-Service, damit auch bei geschlossener App nachgebucht wird |
 
-### Verifying your download (optional but smart)
+Alles rund um SMS bleibt **auf deinem Gerät**. Nachrichteninhalte werden niemals hochgeladen; nur dein Konto-Login und der Plan-Status kommunizieren mit unserem Backend.
 
-Every release's notes include the APK's SHA-256 checksum. Compare with:
+## Warum nicht im Play Store?
+
+Googles Play-Richtlinien erlauben die Art von SMS-Automatisierung nicht, auf der diese App aufbaut – unabhängig vom Zweck. Der Direkt-Download aus diesem Repository ist der offizielle und einzige Kanal. Wenn du diese APK woanders gefunden hast: nicht installieren.
+
+### Download prüfen (optional, aber klug)
+
+Jede Release-Notiz enthält die SHA-256-Prüfsumme der APK. Vergleichen mit:
 
 ```
 certutil -hashfile dataflow-ulod.apk SHA256   # Windows
@@ -81,12 +71,26 @@ sha256sum dataflow-ulod.apk                   # Linux/Mac
 
 ## Support
 
-Found a bug or have a question? [Open an issue](https://github.com/Bashar101Kh/dataflow-ulod-releases/issues)
-or use **Settings → About → Share diagnostics** in the app to attach a report
-(it's generated on-device; nothing is uploaded automatically).
+Bug gefunden oder Frage? [Issue öffnen](https://github.com/Bashar101Kh/dataflow-ulod-releases/issues) oder in der App **Einstellungen → Über → Diagnose teilen** (der Bericht wird auf dem Gerät erstellt; nichts wird automatisch hochgeladen).
 
 ---
 
-*Dataflow ULOD is an independent project and is not affiliated with, endorsed
-by, or connected to Lidl, Lidl Connect, or Schwarz Gruppe. "Lidl Connect" is a
-trademark of its respective owner.*
+## English
+
+**Never throttled again.** Dataflow ULOD automatically refills your Lidl Connect Unlimited data — optionally *before* you get throttled. Set it up once, never think about it again.
+
+I'm the developer and I use ULOD as the replacement for my home internet: 469 GB in one month, 464 automatic refills, zero failures.
+
+**[⬇ Download the latest APK](https://github.com/Bashar101Kh/dataflow-ulod-releases/releases/latest/download/dataflow-ulod.apk)** · [Website](https://dataflow-ulod-auto-refill.lovable.app) · [Instagram](https://www.instagram.com/dataflow.ulod/)
+
+**How it works:** Lidl Connect Unlimited gives you 1 GB of full-speed data at a time. ULOD books the next gigabyte for you — in DATA mode even *just before* the 1 GB cliff, so the throttled moment never happens. Three trigger modes (SMS / DATA / BOTH), live usage gauge, activity log, statistics.
+
+**Good to know:** according to community reports, automated refills could violate the Lidl Connect terms — use at your own risk. ULOD is deliberately restrained: by default it only refills at Lidl's early warning, one package at a time, no bulk actions.
+
+**Privacy:** everything SMS-related stays on your phone. Message contents are never uploaded; only your account sign-in and plan status talk to our backend.
+
+**Requirements:** Android 7.0+, a Lidl Connect Unlimited tariff on an active SIM. Free during the public beta. Not on the Play Store because Google's policies don't allow this kind of SMS automation — this repository is the official and only channel. Every release includes the APK's SHA-256 checksum.
+
+---
+
+*Dataflow ULOD ist ein unabhängiges Projekt und steht in keiner Verbindung zu Lidl, Lidl Connect oder der Schwarz Gruppe. „Lidl Connect" ist eine Marke ihres jeweiligen Inhabers. / Dataflow ULOD is an independent project, not affiliated with, endorsed by, or connected to Lidl, Lidl Connect, or Schwarz Gruppe.*
